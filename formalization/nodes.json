@@ -1,0 +1,355 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s1",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "For every prime $p$, every integer $1\\leq h<p$, and every $n\\geq0$,\n\\[\n u_h(n)+2u_h(n+p)+u_h(n+2p)\\equiv0\\pmod p.\n\\]\nThe same congruence holds for $h=0$ and $n\\geq1$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s2",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s2",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "For every $n\\geq9$,\n\\begin{equation}\n \\sum_{j=0}^{6}c_j(n)a(n-j)=0.\n\\end{equation}\nWith the zero extension above, the same identity holds for $n=6,7,8$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s3",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s3",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "For every prime $p\\ne3$ and every $n\\geq0$,\n\\begin{equation}\n a(n)+2a(n+p)+a(n+2p)\\equiv0\\pmod p.\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s4",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s4",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "The series $A$ satisfies\n\\begin{equation}\n d(x)A(x)=r(x)B(x)+s(x).\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s5",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "Every odd-hit coefficient $u_{2j+1}(n)$ is even.\nTheorem~\\ref{thm:cong} holds, as does the two-hit congruence for every prime.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s6",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "For every odd prime $p$ and $n\\geq0$,\n$a(n+p^2)\\equiv-a(n)\\pmod p$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s7",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "The prime-shift conjectures in A000033 and A000181 hold on their full\nstated domains. So does the corresponding assertion in A000185.\nFor A000179 and every prime $p$,\n\\[\n u_0(n+4p)-2u_0(n+2p)+u_0(n)\\equiv0\\pmod p\\qquad(n\\geq1).\n\\]\nThe same uniform prime-shift result holds for A058089 at $p>6$ and for\nA058090 at $p>7$, on their source domains.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s8",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "Let $q(n)=u_2(n)/n$ for $n\\geq1$ and $q(0)=0$.\nThese are integers, equal to A000426, and for every prime $p$ and $n\\geq1$,\n\\[\n q(n)+2q(n+p)+q(n+2p)\\equiv0\\pmod p.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s9",
+      "contributor": null,
+      "identity": "collected:mathar-a000159-recurrence:2:s9",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+      },
+      "lineage": "collected:mathar-a000159-recurrence:s9",
+      "macros": {
+        "\\coeff": "[#1^{#2}]"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "mathar-a000159-recurrence",
+      "scope": "in_scope",
+      "statement": "For $n\\geq1$, $u_1(n)=2n v(n-1)$.\nFor $n\\geq3$,\n\\[\n 3\\{n a(n+1)-(n+1)a(n)\\}=2(n^2-1)u_2(n).\n\\]\nThese identities are consequences of Kaplansky--Riordan (1946).",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+      "toolchain": null,
+      "version": 2,
+      "work": "mathar-a000159-recurrence"
+    }
+  ]
+}

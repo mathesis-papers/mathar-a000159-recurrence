@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 102717,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "fb8203bb7b1619933918dc66d6b0e5e4ef7182a3560010fbb16e37d484fa3d22",
+      "sha256": "fb8203bb7b1619933918dc66d6b0e5e4ef7182a3560010fbb16e37d484fa3d22"
+    },
+    "source": {
+      "bytes": 18667,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "f01f1b3ee01fb598189261c8c95a3d68b34873de184e04a43a8daa9488c54db9",
+      "sha256": "f01f1b3ee01fb598189261c8c95a3d68b34873de184e04a43a8daa9488c54db9"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "Extending Kaplansky and Riordan's ménage identities (1946, pp. 121–122, equations (25) and (33)), we use Jovović's factorial-series generating function to prove the conjectures of Mathar (recurrence) and van Hoeij (prime-shift congruence) in OEIS A000159, revision 54, first and third FORMULA lines, dated 2 November 2015 and 10 June 2019. For the hit numbers u_h(n)=[t^h]U_n(t), the stronger uniform result is u_h(n)+2u_h(n+p)+u_h(n+2p) ≡ 0 (mod p) for every prime p, 1 <= h < p and n >= 0; the zero-hit case holds for n >= 1. It settles the neighboring two-, four- and five-hit congruences. We also prove prime-square antiperiodicity for three hits, give exact recurrence certificates for the neighboring diagonals, and correct the one-hit indexing formula by identifying it with a classical identity.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 102717,
+      "sha256": "fb8203bb7b1619933918dc66d6b0e5e4ef7182a3560010fbb16e37d484fa3d22",
+      "url": "/api/v1/collected-papers/mathar-a000159-recurrence/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-23T16:06:16.480051649Z",
+    "record": "mathar-a000159-recurrence",
+    "repository_name": "mathar-a000159-recurrence",
+    "source": {
+      "bytes": 18667,
+      "sha256": "f01f1b3ee01fb598189261c8c95a3d68b34873de184e04a43a8daa9488c54db9",
+      "url": "/api/v1/collected-papers/mathar-a000159-recurrence/files/source?version=2"
+    },
+    "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-23T16:06:16.480051649Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "mathar-a000159-recurrence"
+  }
+}

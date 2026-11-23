@@ -1,0 +1,552 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\hypersetup{pdftitle={Prime-shift extensions of Kaplansky-Riordan's menage identities: Mathar's recurrence and van Hoeij's congruences},pdfauthor={Haobo Ma and Wenlin Zhang}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\coeff}[2]{[#1^{#2}]}
+\title{Prime-shift extensions of Kaplansky--Riordan's m\'enage identities:\protect\\
+Mathar's recurrence and van Hoeij's congruences}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}\and
+Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{15 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Kaplansky and Riordan's m\'enage identities (1946,
+pp.~121--122, equations (25) and (33)), we use Jovovi\'c's factorial-series
+generating function to prove the conjectures of Mathar (recurrence) and
+van Hoeij (prime-shift congruence) in OEIS A000159, revision 54, first and third
+FORMULA lines, dated 2 November 2015 and 10 June 2019.
+For the hit numbers $u_h(n)=[t^h]U_n(t)$, the stronger uniform result is
+$u_h(n)+2u_h(n+p)+u_h(n+2p)\equiv0\pmod p$ for every prime $p$,
+$1\leq h<p$ and $n\geq0$; the zero-hit case holds for $n\geq1$.
+It settles the neighboring two-, four- and five-hit congruences.
+We also prove prime-square antiperiodicity for three hits, give exact
+recurrence certificates for the neighboring diagonals, and correct the
+one-hit indexing formula by identifying it with a classical identity.
+\end{abstract}
+
+\section{The sequence and the statements}
+The main observation is that factorial truncation modulo $p$ gives the
+same denominator for every hit degree below $p$. It proves several
+prime-shift statements at once, while the characteristic-zero generating
+function proves the recurrences. Kaplansky--Riordan's classical
+differentiation identities supply the one-hit correction and the
+two-hit/three-hit relation; those identities are reproved with their
+original attribution, not presented as new.
+
+Mathar's recurrence concerns the diagonal
+$a(n)=\mathrm{A058087}(n,n-3)$ of the triangle of m\'enage hit
+polynomials \cite{a159,a58087}. We prove that recurrence and show
+that the same generating function proves van Hoeij's prime-shift
+congruence. Throughout, generating functions are formal power series;
+no analytic convergence is required.
+
+Write $U_0(t)=1$ and, for $n\geq1$, put
+\begin{equation}\label{eq:rook}
+ U_n(t)=\sum_{j=0}^{n}\frac{2n}{2n-j}
+           \binom{2n-j}{j}(n-j)!(t-1)^j.
+\end{equation}
+This is the m\'enage hit polynomial of Kaplansky and Riordan
+\cite[p.~121, equation (25)]{kr}; it is the formula recorded in
+OEIS A058087 \cite[FORMULA, Orrick, 9 August 2020]{a58087}.
+That triangle lists coefficients in descending degree, so
+$a(n)=\coeff{t}{3}U_n(t)$ for $n\geq3$.
+Set $a(0)=a(1)=a(2)=0$ and
+$A(x)=\sum_{n\geq0}a(n)x^n$.
+Put $u_h(n)=[t^h]U_n(t)$ and $C_h(x)=\sum_{n\geq0}u_h(n)x^n$,
+so $a=u_3$ and $A=C_3$. The first six terms in the source domain are
+\[
+ (a(3),\ldots,a(8))=(2,8,20,152,994,7888).
+\]
+\begin{theorem}[Uniform prime shifts]\label{thm:uniform}
+For every prime $p$, every integer $1\leq h<p$, and every $n\geq0$,
+\[
+ u_h(n)+2u_h(n+p)+u_h(n+2p)\equiv0\pmod p.
+\]
+The same congruence holds for $h=0$ and $n\geq1$.
+\end{theorem}
+
+For $0\leq j\leq6$, define $c_j(n)$ by
+\begin{center}
+\begin{tabular}{cl}
+\toprule
+$j$ & $c_j(n)$\\
+\midrule
+0 & $2(-252307n+1041077)$\\
+1 & $504614n^2-3362985n+5118150$\\
+2 & $1280831n^2-7397886n+6461565$\\
+3 & $746598n^2-2913543n-1336090$\\
+4 & $-405481n^2+6175011n-15469320$\\
+5 & $-375862n^2+4098537n-8846430$\\
+6 & $2(-187931n+560630)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{theorem}\label{thm:rec}
+For every $n\geq9$,
+\begin{equation}\label{eq:rec}
+ \sum_{j=0}^{6}c_j(n)a(n-j)=0.
+\end{equation}
+With the zero extension above, the same identity holds for $n=6,7,8$.
+\end{theorem}
+
+\begin{theorem}\label{thm:cong}
+For every prime $p\ne3$ and every $n\geq0$,
+\begin{equation}\label{eq:cong}
+ a(n)+2a(n+p)+a(n+2p)\equiv0\pmod p.
+\end{equation}
+\end{theorem}
+
+\section{A factorial-series expression}
+Let $F(z)=\sum_{k\geq0}k!z^k$, let
+$Z=x/(1+x)^2$, and let $B(x)=F(Z)$.
+Composition is well defined because $Z$ has zero constant term.
+Define the integer polynomials
+\begin{align*}
+ r(x)&=-4x^5+6x^4+10x^3+8x^2+6x+4,\\
+ s(x)&=4x^5-2x^4-16x^3-14x^2-10x-4,\\
+ d(x)&=3(1+x)^2.
+\end{align*}
+
+\begin{lemma}\label{lem:gf}
+The series $A$ satisfies
+\begin{equation}\label{eq:affine}
+ d(x)A(x)=r(x)B(x)+s(x).
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $n\geq1$ and $0\leq j\leq n$,
+\[
+ \frac{2n}{2n-j}\binom{2n-j}{j}
+ =\binom{2n-j}{j}+\binom{2n-j-1}{j-1},
+\]
+where the second term is zero when $j=0$.
+The identity follows from
+$j\binom{2n-j}{j}=(2n-j)\binom{2n-j-1}{j-1}$.
+In particular, every coefficient of $U_n$ is an integer.
+Substitute $n=k+j$ into \eqref{eq:rook}, sum over $n$, and put
+$u=x(t-1)$. The binomial-series identities give
+\begin{align}
+ \sum_{n\geq0}U_n(t)x^n
+ &=\sum_{k\geq0}k!x^k
+   \sum_{j\geq0}\left\{\binom{2k+j}{j}
+           +\binom{2k+j-1}{j-1}\right\}u^j\notag\\
+ &=\sum_{k\geq0}k!x^k\frac{1+u}{(1-u)^{2k+1}}.
+ \label{eq:bivariate}
+\end{align}
+For $k=j=0$, the brace is interpreted as $1$, consistently with $U_0=1$.
+All rearrangements are valid coefficientwise: only finitely many terms
+contribute to a fixed power of $x$.
+Equation~\eqref{eq:bivariate} is the generating function recorded by
+Vladeta Jovovi\'c in A058087 (first FORMULA, 14 December 2009),
+after the substitution $(x,y)\mapsto(xt,t^{-1})$ reverses the row order
+\cite{a58087}. We use this classical input to derive the scalar
+recurrence and the uniform congruences.
+
+Write $\alpha_k=\binom{2k+3}{3}$ and $\beta_k=\binom{2k+2}{2}$.
+The coefficient of $t^3$ in the $k$th summand in
+\eqref{eq:bivariate} is
+\[
+ \frac{k!x^{k+3}}{(1+x)^{2k+4}}
+       \bigl((1-x)\alpha_k+(1+x)\beta_k\bigr).
+\]
+Hence, with $\theta=z\,d/dz$,
+\begin{equation}\label{eq:theta}
+ 3A=\frac{x^3}{(1+x)^4}
+ \left[(4-4x)\theta^3F+(18-6x)\theta^2F
+                  +(20-2x)\theta F+6F\right]_{z=Z}.
+\end{equation}
+Indeed,
+$3(\alpha_k+\beta_k)=4k^3+18k^2+20k+6$ and
+$3(-\alpha_k+\beta_k)=-4k^3-6k^2-2k$.
+Direct coefficient comparison in $F$ yields
+\[
+ z^2F'(z)+(z-1)F(z)=-1.
+\]
+Differentiation, or iteration of $\theta$, now gives
+\begin{align*}
+ z\theta F&=(1-z)F-1,\\
+ z^2\theta^2F&=(z^2-3z+1)F+2z-1,\\
+ z^3\theta^3F&=(-z^3+7z^2-6z+1)F-3z^2+5z-1.
+\end{align*}
+Insert these three identities into \eqref{eq:theta} and use
+$Z=x/(1+x)^2$. Collecting the coefficient of $F(Z)$ and the
+constant term gives, respectively, $r/[3(1+x)^2]$ and
+$s/[3(1+x)^2]$. This proves \eqref{eq:affine}.
+The calculation can be made in $\mathbb Q((x))$; its final identity
+lies in $\mathbb Q[[x]]$.
+\end{proof}
+
+\section{The differential identity and the recurrence}
+The chain rule applied to the factorial-series equation gives
+\begin{equation}\label{eq:B}
+ x^2(1+x)B'=(1-x^3)B+(x^2-1)(1+x).
+\end{equation}
+For clarity, define rational functions
+\[
+ R=\frac r d,\qquad S=\frac s d,\qquad
+ T=\frac{1-x^3}{x^2(1+x)},\qquad V=\frac{x^2-1}{x^2}.
+\]
+Thus $A=RB+S$ and $B'=TB+V$ in the Laurent-series field.
+Set
+\[
+ R_1=R'+RT,\quad S_1=S'+RV,\quad
+ R_2=R_1'+R_1T,\quad S_2=S_1'+R_1V.
+\]
+Then $A'=R_1B+S_1$ and $A''=R_2B+S_2$.
+The following polynomials give a differential equation for $A$:
+\begin{align*}
+ P_2={}&-375862x^7-405481x^6+746598x^5
+                         +1280831x^4+504614x^3,\\
+ P_1={}&-375862x^7-35945x^6+2525682x^5+2312643x^4\\
+       &\hspace{16mm}-993731x^3-1849143x^2-504614x,\\
+ P_0={}&-1133912x^6+2249705x^5+2743028x^4-3357337x^3\\
+       &\hspace{16mm}-3210883x^2+2259779x+2082154,\\
+ H={}&1136624x^3-10348x^4+1516100x^5.
+\end{align*}
+Explicit rational identities are
+\begin{equation}\label{eq:cert}
+ \begin{split}
+ P_2R_2+P_1R_1+P_0R&=0,\\
+ P_2S_2+P_1S_1+P_0S&=H.
+ \end{split}
+\end{equation}
+These identities can be verified by substitution of the displayed
+$r,s,d,T,V$ and polynomial expansion after clearing denominators.
+They imply
+\begin{equation}\label{eq:ode}
+ P_2A''+P_1A'+P_0A=H.
+\end{equation}
+
+\begin{proof}[Proof of Theorem~\ref{thm:rec}]
+Let $D=x\,d/dx$. Substitution of the seven displayed $c_j$ gives the
+operator identity
+\[
+ \sum_{j=0}^6x^jc_j(D+j)
+       =P_2\frac{d^2}{dx^2}+P_1\frac{d}{dx}+P_0.
+\]
+To check the equality, write $c_j(v)=u_jv^2+v_jv+w_j$.
+The three coefficients on the right are obtained on the left as
+\[
+ x^2\sum_j u_jx^j,\qquad
+ x\sum_j\bigl((2j+1)u_j+v_j\bigr)x^j,\qquad
+ \sum_j(u_jj^2+v_jj+w_j)x^j,
+\]
+using $D^2=x^2(d/dx)^2+x(d/dx)$.
+For $n\geq6$, the coefficient of $x^n$ on the left, applied to $A$,
+is $\sum_j c_j(n)a(n-j)$: $D+j$ acts on $x^{n-j}$ with eigenvalue $n$.
+The coefficient of $x^n$ in $H$ vanishes because $\deg H=5$.
+Equation~\eqref{eq:ode} therefore proves the claim for all $n\geq6$,
+including Mathar's full source domain $n\geq9$.
+\end{proof}
+
+Since $c_0(n)\ne0$ for every integer $n\geq9$, the recurrence and the
+six values $a(3),\ldots,a(8)$ determine the sequence on its source domain.
+
+\section{The prime-shift congruence}
+\begin{proof}[Proof of Theorem~\ref{thm:uniform}]
+Work in $\mathbb F_p[t][[x]]$ and set $u=x(t-1)$.
+Factorial truncation in \eqref{eq:bivariate} gives
+\begin{equation}\label{eq:uniformnumerator}
+ (1-u)^{2p}\sum_{n\geq0}U_n(t)x^n
+ =N_p(x,t):=\sum_{k=0}^{p-1}k!x^k(1+u)(1-u)^{2p-2k-1}.
+\end{equation}
+Each summand has $x$-degree at most $2p-k$, hence $\deg_xN_p\leq2p$.
+By Frobenius,
+\[
+ (1-u)^{2p}=(1+x^p-x^pt^p)^2.
+\]
+For $0\leq h<p$, the coefficient of $t^h$ on the left of
+\eqref{eq:uniformnumerator} is therefore $(1+x^p)^2C_h(x)$.
+Only $k=0$ contributes to $[x^{2p}]N_p$, and that coefficient is
+$-(t-1)^{2p}=-(t^{2p}-2t^p+1)$.
+Its $t^h$ coefficient is zero for $1\leq h<p$.
+Thus $[t^h]N_p$ has $x$-degree less than $2p$ for those $h$.
+Extracting $x^{n+2p}$ proves the asserted range $n\geq0$.
+For $h=0$ the degree bound $2p$ gives $n\geq1$ instead.
+\end{proof}
+
+\begin{corollary}[Parity and the three-hit conjecture]\label{cor:parity}
+Every odd-hit coefficient $u_{2j+1}(n)$ is even.
+Theorem~\ref{thm:cong} holds, as does the two-hit congruence for every prime.
+\end{corollary}
+\begin{proof}
+Modulo $2$, only $k=0,1$ survive in \eqref{eq:bivariate}, giving
+\[
+ \sum_{n\geq0}U_n(t)x^n
+ =1+\frac{x}{1+x^2+x^2t^2},\qquad
+ C_2(x)=\frac{x^3}{1+x^4}.
+\]
+The first identity gives odd-hit parity. The second gives
+$(1+x^2)^2C_2=x^3$, which proves the two-hit congruence also at $p=2$.
+For three hits, use parity at $p=2$ and Theorem~\ref{thm:uniform} at $p>3$.
+\end{proof}
+
+The extension to $p=3$ is not asserted in A000159 and fails at $n=4$:
+$a(4)+2a(7)+a(10)=697756\equiv1\pmod3$.
+
+\begin{corollary}[Prime-square antiperiods]\label{cor:antiperiod}
+For every odd prime $p$ and $n\geq0$,
+$a(n+p^2)\equiv-a(n)\pmod p$.
+\end{corollary}
+\begin{proof}
+For $p>3$, set $v_k=a(n+kp)$ in $\mathbb F_p$.
+Theorem~\ref{thm:cong} gives $v_{k+2}+2v_{k+1}+v_k=0$, so induction gives
+\[
+ v_k=(-1)^k\{v_0-k(v_0+v_1)\}.
+\]
+Take $k=p$. For $p=3$, extract $t^3$ from the three terms $k=0,1,2$
+in \eqref{eq:bivariate}; direct expansion gives
+\[
+ A(x)=\frac{x^7-x^5-x^3}{(1+x)^8},\qquad
+ (1+x^9)A=x^8+x^7-x^6-x^5-x^4-x^3
+ \quad\text{in }\mathbb F_3[[x]].
+\]
+The polynomial on the right has degree $8$, proving the result for $p=3$.
+\end{proof}
+
+\begin{corollary}[Hit diagonals]\label{cor:diagonals}
+The prime-shift conjectures in A000033 and A000181 hold on their full
+stated domains. So does the corresponding assertion in A000185.
+For A000179 and every prime $p$,
+\[
+ u_0(n+4p)-2u_0(n+2p)+u_0(n)\equiv0\pmod p\qquad(n\geq1).
+\]
+The same uniform prime-shift result holds for A058089 at $p>6$ and for
+A058090 at $p>7$, on their source domains.
+\end{corollary}
+\begin{proof}
+The diagonals A000033, A000181 and A000185 are $u_2,u_4,u_5$.
+Use Theorem~\ref{thm:uniform} when $p>h$ and parity when $p=2$ and $h$ is odd;
+Corollary~\ref{cor:parity} covers the remaining two-hit case $p=2$.
+For zero hits, multiply the annihilator $(E^p+1)^2$ by $(E^p-1)^2$,
+where $Ef(n)=f(n+1)$. Their product is $E^{4p}-2E^{2p}+1$.
+Finally A058089 and A058090 are $u_6$ and $u_7$.
+\end{proof}
+
+\begin{corollary}[The two-hit quotient]\label{cor:quotient}
+Let $q(n)=u_2(n)/n$ for $n\geq1$ and $q(0)=0$.
+These are integers, equal to A000426, and for every prime $p$ and $n\geq1$,
+\[
+ q(n)+2q(n+p)+q(n+2p)\equiv0\pmod p.
+\]
+\end{corollary}
+\begin{proof}
+Define the integral formal series
+\[
+ Q(x)=\sum_{k\geq0}(2k+1)k!\frac{x^{k+2}}{(1+x)^{2k+2}}.
+\]
+Differentiating its $k$th term gives
+$(2k+1)k!x^{k+2}\{k+2-kx\}/(1+x)^{2k+3}$ after multiplication by $x$.
+This is exactly $[t^2]$ of the $k$th term of \eqref{eq:bivariate}.
+Thus $xQ'=C_2$, proving both integrality and the quotient identity.
+Modulo $p$, multiplication of the truncated series by $(1+x)^{2p}$
+gives a polynomial of degree at most $2p$.
+Coefficient extraction at $n+2p$ proves the congruence for $n\geq1$.
+\end{proof}
+
+\section{Classical identities and the corrected index}
+Let
+\[
+ H_m(t)=\sum_{j=0}^m\binom{2m-j}{j}(m-j)!(t-1)^j,
+ \qquad v(m)=H_m(0)=\mathrm{A000271}(m).
+\]
+Kaplansky--Riordan \cite[p.~122, equation (33)]{kr} give
+\begin{equation}\label{eq:classical}
+ U_n'=2nH_{n-1},\qquad
+ U_n'=2nU_{n-1}-\frac{n(t-1)}{n-1}U_{n-1}'\quad(n\geq2).
+\end{equation}
+The first identity also holds at $n=1$ by direct calculation.
+
+\begin{corollary}[Classical one-hit and two/three-hit identities]\label{cor:classical}
+For $n\geq1$, $u_1(n)=2n v(n-1)$.
+For $n\geq3$,
+\[
+ 3\{n a(n+1)-(n+1)a(n)\}=2(n^2-1)u_2(n).
+\]
+These identities are consequences of Kaplansky--Riordan (1946).
+\end{corollary}
+\begin{proof}
+Evaluate the first identity in \eqref{eq:classical} at $t=0$.
+For the second, replace $n$ by $n+1$ in the other identity and extract $t^2$:
+$3a(n+1)=2(n+1)u_2(n)-(n+1)\{2u_2(n)-3a(n)\}/n$.
+Multiplication by $n$ gives the result.
+\end{proof}
+
+A000425's third FORMULA line (Mathar, 2 November 2015) instead conjectures
+\[
+u_1(n)=2n\mathrm{A000271}(n).
+\]
+At $n=4$ the two sides are $8$ and $24$.
+The preceding corollary gives the corrected shift, with its classical proof.
+The second identity is the A000033 relation recorded by van Hoeij on
+9 June 2019, now explicitly attributed to the earlier identity.
+
+\section{Exact recurrence certificates for sibling entries}\label{sec:siblings}
+Here is a uniform algebraic way to check the additional source recurrences.
+Write $\theta=z\,d/dz$ and $\theta^jF=f_jF+g_j$.
+Starting from $(f_0,g_0)=(1,0)$, the factorial-series equation gives
+\[
+ f_{j+1}=zf_j'+(1/z-1)f_j,\qquad
+ g_{j+1}=zg_j'-f_j/z.
+\]
+For $h\geq1$ put
+$\alpha_h(k)=\binom{2k+h}{h}$,
+$\beta_h(k)=\binom{2k+h-1}{h-1}$, and put
+$\alpha_0=1,\beta_0=0$. Extracting $t^h$ from
+\eqref{eq:bivariate} yields
+\begin{equation}\label{eq:allmodels}
+ C_h=\frac{x^h}{(1+x)^{h+1}}
+ \left[\{(1-x)\alpha_h(\theta)+(1+x)\beta_h(\theta)\}F\right]_{z=Z}.
+\end{equation}
+The recursions for $f_j,g_j$ therefore give explicit rational functions
+$(R_h,S_h)$ with $C_h=R_hB+S_h$.
+Differentiation of a pair is the exact rational operation
+\[
+ \partial(R,S)=(R'+RT,S'+RV),\qquad
+ T=\frac{1-x^3}{x^2(1+x)},\quad V=\frac{x^2-1}{x^2}.
+\]
+To check a source recurrence $\sum_{j=0}^m d_j(n)u_h(n-j)=0$, apply
+\begin{equation}\label{eq:sourceoperator}
+ \mathcal L=\sum_{j=0}^m x^jd_j(D+j),\qquad D=x\partial,
+\end{equation}
+to $(R_h,S_h)$. Substitution gives the following rational identities;
+the complete coefficient arrays and the operations above are in
+\texttt{models.py}.
+\begin{center}\small
+\begin{tabular}{llll}
+\toprule
+Source recurrence & $h$ & $\mathcal L(C_h)$ & Source-domain range\\
+\midrule
+A000425, FORMULA 2 &1&$0$&$n\geq4$\\
+A000033, FORMULA 4 &2&$0$&$n\geq5$\\
+A000159, Maplesoft reduction &3&$0$&$n\geq6$\\
+A000181, FORMULA 1 &4&$0$&$n\geq8$\\
+A000185, FORMULA 1 &5&$-3202597896x^5$&$n\geq11$\\
+A000185, FORMULA 2 &5&$0$&$n\geq9$\\
+\bottomrule
+\end{tabular}\end{center}
+Each identity has zero coefficient of $B$; the displayed remainder
+is an exact polynomial. Equations \eqref{eq:allmodels} and
+\eqref{eq:sourceoperator}, or polynomial expansion after clearing
+denominators, verify the table without fitting any initial terms.
+For $n\geq m$ the coefficient of $x^n$ is the required recurrence sum.
+The remainder vanishes in all the listed ranges. This proves the
+recurrences there, including the conjectures of Mathar in A000425,
+A000181 and A000185.
+
+The official Maplesoft example \cite{maple} starts from Mathar's
+recurrence and explicitly says ``Assuming the input R is correct''.
+Its third-order reduction is thus conditional on that input;
+Theorem~\ref{thm:rec} and the identity above supply the coefficient-defined
+sequence's recurrence premise. No earlier unconditional proof of this
+coefficient bridge is inferred from the software example.
+
+\section{Source coverage and verification}
+The following locators identify the precise source statements
+\cite{a159,a58087,siblings}. A FORMULA number counts the displayed
+FORMULA lines in the indicated entry. Dates are contribution dates.
+\begingroup\small
+\begin{longtable}{p{.46\linewidth}p{.45\linewidth}}
+\toprule Source item & Coverage\\\midrule\endhead
+A000159 rev.~54, FORMULA 1, Mathar, 2 Nov.~2015
+& Proved: recurrence for $n\geq9$; zero extension for $n=6,7,8$.\\[3pt]
+A000159 rev.~54, FORMULA 3, van Hoeij, 10 June 2019
+& Proved: prime-shift congruence, extended to $n\geq0$.\\[3pt]
+A000159 FORMULA 2; A000425 FORMULA 1; A000033 and A000426 Bessel formulas
+& Not covered: the analytic rounding error bounds.\\[3pt]
+A000425 rev.~34, FORMULA 2, Mathar, 2 Nov.~2015
+& Proved: recurrence for $n\geq4$ (Section~\ref{sec:siblings}).\\[3pt]
+A000425 rev.~34, FORMULA 3, Mathar, 2 Nov.~2015
+& Refuted-and-corrected: $8\ne24$ at $n=4$; corrected shift reproved; prior proof Kaplansky--Riordan, 1946, (33).\\[3pt]
+A000033 rev.~60, FORMULA 4, Kotesovec, 26 Oct.~2012
+& Proved: the stated recurrence, $n\geq5$.\\[3pt]
+A000033 rev.~60, two/three-hit identity, van Hoeij, 9 June 2019
+& Reproved; prior proof Kaplansky--Riordan, 1946, (33).\\[3pt]
+A000033 rev.~60, last FORMULA, van Hoeij, 10 June 2019
+& Proved: congruence for all primes, $n\geq1$; also at $n=0$ by zero extension.\\[3pt]
+A000181 rev.~30, FORMULAS 1--2, Mathar, 2 Nov.~2015; van Hoeij, 10 June 2019
+& Proved: recurrence for $n\geq8$ and congruence for $p>3$ on $n\geq4$.\\[3pt]
+A000185 rev.~28, FORMULAS 1--3, Mathar, 2 Nov.~2015; van Hoeij, 13 June 2019
+& Proved: recurrences for $n\geq11$ and $n\geq9$; congruence for $p\ne3,5$ on $n\geq5$.\\[3pt]
+A000426 rev.~44, last FORMULA, van Hoeij, 13 June 2019
+& Proved: quotient congruence for all primes, $n\geq1$.\\[3pt]
+A000179 rev.~274, van Hoeij, 11 Jan.~2022, four-prime-shift assertion
+& Proved for every prime, $n\geq1$, with the source's $u_0(1)=-1$.\\[3pt]
+A058089 rev.~11 and A058090 rev.~14, defining diagonals
+& Not posed; proved: uniform congruence for $p>6$ and $p>7$, respectively.\\[3pt]
+A000159 with $p=3$
+& Not asserted in the source; fails for $n=4$; prime-square antiperiod instead proved.\\[3pt]
+A058087 rev.~66, FORMULAS 1--2; A094314 rev.~35
+& Prior generating function (Jovovi\'c, 2009) and hit polynomial (Kaplansky--Riordan, 1946) used. A094314 agrees for $n\geq2$; its $n=1$ convention differs.\\[3pt]
+Other linked asymptotic, nonlinear or negative-index formulas
+& Not covered.\\
+\bottomrule
+\end{longtable}\endgroup
+
+The Lean declaration
+\href{https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656}{\texttt{MatharA000159Recurrence.result}}
+states the recurrence for the rational coefficient
+$a(n)=\coeff{t}{3}U_n(t)$ for all $n\geq9$.
+Its definitions \texttt{U}, \texttt{a}, and \texttt{claim} are in the same
+pinned file. This declaration covers Theorem~\ref{thm:rec} for $n\geq9$,
+not the modular or sibling results. The zero extension, uniform congruences,
+antiperiods, quotient theorem and classical deductions have the written
+proofs above. The recurrence certificates are exact rational identities.
+The accompanying \texttt{verify.py} checks these rational identities and
+independently compares the defining rook sum with the recurrences and
+congruences on the finite ranges specified in \texttt{README.md}.
+These finite comparisons are separate from the all-index proofs.
+
+\begin{thebibliography}{9}
+\bibitem{a159}
+The OEIS Foundation Inc., \emph{The On-Line Encyclopedia of Integer
+Sequences}, A000159, revision 54, 21 June 2026.
+\url{https://oeis.org/A000159/internal}.
+FORMULA contributions by R. J. Mathar (2 November 2015) and Mark
+van Hoeij (9 and 10 June 2019).
+\bibitem{a58087}
+The OEIS Foundation Inc., \emph{The On-Line Encyclopedia of Integer
+Sequences}, A058087, revision 66, 5 November 2025.
+\url{https://oeis.org/A058087/internal}.
+Generating function recorded by Vladeta Jovovi\'c, 14 December 2009;
+M\'enage hit polynomial formula recorded by William P. Orrick,
+9 August 2020.
+\bibitem{kr}
+I. Kaplansky and J. Riordan,
+\emph{The probl\`eme des m\'enages},
+Scripta Mathematica \textbf{12} (1946), 113--124,
+especially pp.~121--122, equations (25), (26) and (33).
+\url{https://oeis.org/A000166/a000166_1.pdf}.
+\bibitem{siblings}
+The OEIS Foundation Inc., entries
+\href{https://oeis.org/A000179/internal}{A000179} (rev.~274),
+\href{https://oeis.org/A000425/internal}{A000425} (rev.~34),
+\href{https://oeis.org/A000033/internal}{A000033} (rev.~60),
+\href{https://oeis.org/A000271/internal}{A000271} (rev.~127),
+\href{https://oeis.org/A000426/internal}{A000426} (rev.~44),
+\href{https://oeis.org/A000181/internal}{A000181} (rev.~30),
+\href{https://oeis.org/A000185/internal}{A000185} (rev.~28),
+\href{https://oeis.org/A058089/internal}{A058089} (rev.~11),
+\href{https://oeis.org/A058090/internal}{A058090} (rev.~14), and
+\href{https://oeis.org/A094314/internal}{A094314} (rev.~35).
+Contribution locators are specified in the coverage table.
+\bibitem{maple}
+Maplesoft, \emph{LREtools[MinimalRecurrence]}, Examples, outputs (3)--(7)
+and the paragraph beginning ``Assuming the input R is correct'';
+command introduced in Maple 2021.
+\url{https://www.maplesoft.com/support/help/Maple/view.aspx?path=LREtools%2FMinimalRecurrence}.
+\end{thebibliography}
+\bigskip
+\noindent\footnotesize
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under Creative Commons Attribution 4.0 International
+(CC BY 4.0).
+\end{document}

@@ -1,0 +1,21 @@
+PASS: defining polynomial rows 0..5 and six initial values
+PASS: recurrence 9..300 and zero-extension cases 6..8
+PASS: three Euler identities, affine reduction, and chain rule
+PASS: both rational differential identities and all operator coefficients
+PASS: prime-shift congruence for 24 primes <=97 and 3<=n<=100
+PASS: truncated numerator degree bound for those primes; p=3 fails at n=4
+ALL_CHECKS_OK
+PASS: A000425 exact rational identity and recurrence 4..300
+PASS: A000033 exact rational identity and recurrence 5..300
+PASS: A000159-short exact rational identity and recurrence 6..300
+PASS: A000181 exact rational identity and recurrence 8..300
+PASS: A000185-six exact rational identity and recurrence 11..300
+PASS: A000185-four exact rational identity and recurrence 9..300
+PASS: corrected one-hit identity 1..300; n=4 gives 8 versus 24
+PASS: two-hit/three-hit relation, exact rational identity and 3..299
+PASS: uniform hit congruence, 18660 pairs, 25 primes <=97 and hit degrees <min(p,8)
+PASS: two-hit p=2 extension, odd-hit parity, three-hit antiperiods including p=3
+PASS: A000426 quotient identity and 2500 prime-shift checks
+PASS: A000179 four-prime-shift relation on all supported indices <=300
+PASS: exact characteristic-two identity and characteristic-three antiperiod identity
+ALL_SIBLING_CHECKS_OK

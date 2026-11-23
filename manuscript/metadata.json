@@ -1,0 +1,15 @@
+{
+  "id": "mathar-a000159-recurrence",
+  "revision": 2,
+  "problem_ids": ["mathar-a000159-recurrence"],
+  "topic": "Uniform prime-shift congruences for ménage hit numbers and Mathar's three-hit recurrence",
+  "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
+  "creators": [
+    {"name": "Haobo Ma", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Wenlin Zhang", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Kaplansky and Riordan's ménage identities (1946, pp. 121–122, equations (25) and (33)), we use Jovović's factorial-series generating function to prove the conjectures of Mathar (recurrence) and van Hoeij (prime-shift congruence) in OEIS A000159, revision 54, first and third FORMULA lines, dated 2 November 2015 and 10 June 2019. For the hit numbers u_h(n)=[t^h]U_n(t), the stronger uniform result is u_h(n)+2u_h(n+p)+u_h(n+2p) ≡ 0 (mod p) for every prime p, 1 <= h < p and n >= 0; the zero-hit case holds for n >= 1. It settles the neighboring two-, four- and five-hit congruences. We also prove prime-square antiperiodicity for three hits, give exact recurrence certificates for the neighboring diagonals, and correct the one-hit indexing formula by identifying it with a classical identity.",
+  "summary": "A uniform factorial-truncation argument proves the prime-shift assertions in A000159, A000033, A000181, A000185 and A000426 and the four-prime-shift assertion in A000179. Rational identities prove Mathar's three-hit recurrence and neighboring recurrences. Classical identities of Kaplansky and Riordan supply the corrected one-hit shift and the two/three-hit relation.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
+}

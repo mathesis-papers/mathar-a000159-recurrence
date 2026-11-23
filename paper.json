@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24413793",
     "current_version": 2,
-    "doi": null,
+    "doi": "10.5281/zenodo.24413794",
     "lean_source": {
       "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
       "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"

@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24413793",
     "current_version": 2,
     "doi": "10.5281/zenodo.24413794",
+    "kind": "note",
     "lean_source": {
       "revision": "8acba483bc80695fef00c6b8c491e2ae16d5145f",
       "url": "https://github.com/the-omega-institute/trureturing/blob/8acba483bc80695fef00c6b8c491e2ae16d5145f/D5/S1/Recurrence/Invariants/MatharA000159Recurrence.lean#L656"
@@ -55,10 +56,12 @@
     "title": "Prime-shift extensions of Kaplansky–Riordan's ménage identities: Mathar's recurrence and van Hoeij's congruences",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T16:06:16.480051649Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "mathar-a000159-recurrence"
